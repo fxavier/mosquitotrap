@@ -21,19 +21,19 @@ CONSTRAINT fk_tl_district
 );
 
 
-CREATE TABLE dos_details (
+CREATE TABLE dos_details(
     dos_id BIGSERIAL,
     obs_date DATE NOT NULL,
-    mix_for75 VARCHAR(20) NOT NULL,
-    triple_rinse_bottle VARCHAR(20) NOT NULL,
-    sop_full_ppe VARCHAR(20) NOT NULL,
-    SOPPulvComBombaComCntFluxo VARCHAR(20) NOT NULL,
-    mobile_item_removed VARCHAR(20) NOT NULL,
-    imobile_item_removed VARCHAR(20) NOT NULL,
-    leaks_pump VARCHAR(20) NOT NULL,
-    tip_nozzle_45wall VARCHAR(20) NOT NULL,
-    correct_speed VARCHAR(20) NOT NULL,
-    overlap_5cm VARCHAR(20),
+    mix_for75 BOOLEAN NOT NULL,
+    triple_rinse_bottle BOOLEAN NOT NULL,
+    sop_full_ppe BOOLEAN NOT NULL,
+    sop_spray_flowcnt BOOLEAN NOT NULL,
+    mobile_item_removed BOOLEAN NOT NULL,
+    imobile_item_covered BOOLEAN NOT NULL,
+    leaks_pump BOOLEAN NOT NULL,
+    tip_nozzle_45wall BOOLEAN NOT NULL,
+    correct_speed BOOLEAN NOT NULL,
+    overlap_5cm BOOLEAN,
     sop_id BIGINT NOT NULL,
     district_id BIGINT NOT NULL,
     team_leader_id BIGINT NOT NULL,
